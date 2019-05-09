@@ -60,3 +60,5 @@ if ( false === PP_Dependencies::is_automatewoo_referrals_active( '2.3.2' ) ) {
 	PP_Dependencies::enqueue_admin_notice( 'AutomateWoo - Referral coupons for subscriptions with $0 initial payment', 'AutomateWoo - Refer A Friend', '2.3.2' );
 	return;
 }
+
+require_once 'includes/class-plugin.php';
