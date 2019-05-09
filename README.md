@@ -1,12 +1,12 @@
-# {plugin_name}
+# AutomateWoo - Referral coupons for subscriptions with $0 initial payment
 
-{plugin_short_description}
+Add support for subscriptions with a $0 initial payment to AutomateWoo referral coupons. The referral coupon is removed after the first subscription payment that is >$0.
 
 ## Installation
 
 To install:
 
-1. Download the latest version of the plugin [here](https://github.com/Prospress/{plugin_slug}/archive/master.zip)
+1. Download the latest version of the plugin [here](https://github.com/Prospress/automatewoo-referral-coupons-for-subscriptions-with-no-initial-payment/archive/master.zip)
 1. Go to **Plugins > Add New > Upload** administration screen on your WordPress site
 1. Select the ZIP file you just downloaded
 1. Click **Install Now**
@@ -18,7 +18,7 @@ To keep the plugin up-to-date, use the [GitHub Updater](https://github.com/afrag
 
 ## Reporting Issues
 
-If you find an problem or would like to request this plugin be extended, please [open a new Issue](https://github.com/Prospress/{plugin_slug}/issues/new).
+If you find an problem or would like to request this plugin be extended, please [open a new Issue](https://github.com/Prospress/automatewoo-referral-coupons-for-subscriptions-with-no-initial-payment/issues/new).
 
 ---
 
