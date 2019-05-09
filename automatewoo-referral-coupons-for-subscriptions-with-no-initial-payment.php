@@ -1,7 +1,4 @@
 <?php
-
-namespace Prospress\ARCFSWNIP;
-
 /*
  * Plugin Name: AutomateWoo - Referral coupons for subscriptions with $0 initial payment
  * Plugin URI: https://github.com/Prospress/automatewoo-referral-coupons-for-subscriptions-with-no-initial-payment/
@@ -38,14 +35,28 @@ namespace Prospress\ARCFSWNIP;
  * @since		1.0
  */
 
-require_once( 'includes/class-pp-dependencies.php' );
+namespace Prospress\ARCFSWNIP;
+
+defined( 'ABSPATH' ) || exit;
+
+require_once 'includes/class-pp-dependencies.php';
 
 if ( false === PP_Dependencies::is_woocommerce_active( '3.6' ) ) {
-	PP_Dependencies::enqueue_admin_notice( 'AutomateWoo - Referral coupons for subscriptions with $0 initial payment', 'WooCommerce', '3.0' );
+	PP_Dependencies::enqueue_admin_notice( 'AutomateWoo - Referral coupons for subscriptions with $0 initial payment', 'WooCommerce', '3.6' );
 	return;
 }
 
 if ( false === PP_Dependencies::is_subscriptions_active( '2.4' ) ) {
-	PP_Dependencies::enqueue_admin_notice( 'AutomateWoo - Referral coupons for subscriptions with $0 initial payment', 'WooCommerce Subscriptions', '2.1' );
+	PP_Dependencies::enqueue_admin_notice( 'AutomateWoo - Referral coupons for subscriptions with $0 initial payment', 'WooCommerce Subscriptions', '2.4' );
+	return;
+}
+
+if ( false === PP_Dependencies::is_automatewoo_active( '4.5' ) ) {
+	PP_Dependencies::enqueue_admin_notice( 'AutomateWoo - Referral coupons for subscriptions with $0 initial payment', 'AutomateWoo', '4.5' );
+	return;
+}
+
+if ( false === PP_Dependencies::is_automatewoo_referrals_active( '2.3.2' ) ) {
+	PP_Dependencies::enqueue_admin_notice( 'AutomateWoo - Referral coupons for subscriptions with $0 initial payment', 'AutomateWoo - Refer A Friend', '2.3.2' );
 	return;
 }

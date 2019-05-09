@@ -2,6 +2,8 @@
 
 namespace Prospress\ARCFSWNIP;
 
+defined( 'ABSPATH' ) || exit;
+
 /**
  * Prospress Dependency Checker
  *
@@ -47,6 +49,16 @@ class PP_Dependencies {
 	 */
 	public static function is_automatewoo_active( $minimum_version = false ) {
 		return self::is_plugin_active( 'automatewoo.php', $minimum_version, 'automatewoo_version' );
+	}
+
+	/**
+	 * Check if the if the AutomateWoo plugin is installed and active.
+	 *
+	 * @since 1.1.0
+	 * @return boolean
+	 */
+	public static function is_automatewoo_referrals_active( $minimum_version = false ) {
+		return self::is_plugin_active( 'automatewoo-referrals.php', $minimum_version, 'aw_referrals_version' );
 	}
 
 	/** Admin Notices **/
