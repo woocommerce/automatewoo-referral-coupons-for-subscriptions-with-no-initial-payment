@@ -65,7 +65,7 @@ final class Plugin {
 
 		if ( $referral_coupon ) {
 			$subscription->remove_coupon( $referral_coupon );
-			$subscription->add_order_note( 'Referral coupon was removed because there was a successful renewal payment.' );
+			$subscription->add_order_note( sprintf( 'Referral coupon (%1$s) was removed because there was a successful renewal payment.', $referral_coupon ) );
 		}
 	}
 
