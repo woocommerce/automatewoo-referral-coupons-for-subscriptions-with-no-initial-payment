@@ -1,6 +1,6 @@
 {
-    "name": "prospress/{plugin_slug}",
-    "description": "{plugin_short_description}",
+    "name": "prospress/automatewoo-referral-coupons-for-subscriptions-with-no-initial-payment",
+    "description": "Add support for subscriptions with a $0 initial payment to AutomateWoo referral coupons.",
     "type": "project",
     "license": "GPL-3.0-only"
 }
