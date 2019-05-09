@@ -2,6 +2,12 @@
 
 Add support for subscriptions with a $0 initial payment to AutomateWoo referral coupons. The referral coupon is removed after the first subscription payment that is >$0.
 
+## Minimum Requirements
+* PHP 5.4+
+* WooCommerce 3.6+
+* AutomateWoo 4.5+
+* AutomateWoo - Refer A Friend 2.3.2+
+
 ## Installation
 
 To install:
