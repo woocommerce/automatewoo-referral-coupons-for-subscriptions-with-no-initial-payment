@@ -1,4 +1,7 @@
 <?php
+
+namespace Prospress\ARCFSWNIP;
+
 /*
  * Plugin Name: AutomateWoo - Referral coupons for subscriptions with $0 initial payment
  * Plugin URI: https://github.com/Prospress/automatewoo-referral-coupons-for-subscriptions-with-no-initial-payment/
@@ -7,8 +10,8 @@
  * Author URI: https://prospress.com/
  * License: GPLv3
  * Version: 1.0.0
- * Requires at least: 4.0
- * Tested up to: 4.8
+ * Requires at least: 5.1
+ * Tested up to: 5.2
  *
  * WC requires at least: 3.6
  *

@@ -1,6 +1,6 @@
 <?php
 
-if ( ! class_exists( 'PP_Dependencies' ) ) :
+namespace Prospress\ARCFSWNIP;
 
 /**
  * Prospress Dependency Checker
@@ -201,5 +201,3 @@ class PP_Dependencies {
 }
 
 PP_Dependencies::init();
-
-endif;
