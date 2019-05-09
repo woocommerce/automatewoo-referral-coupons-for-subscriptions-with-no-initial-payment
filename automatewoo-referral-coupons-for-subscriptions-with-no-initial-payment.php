@@ -2,7 +2,7 @@
 /*
  * Plugin Name: AutomateWoo - Referral coupons for subscriptions with $0 initial payment
  * Plugin URI: https://github.com/Prospress/automatewoo-referral-coupons-for-subscriptions-with-no-initial-payment/
- * Description: Add support for subscriptions with a $0 initial payment to AutomateWoo referral coupons. The referral coupon is removed after the first subscription payment that is >$0.
+ * Description: Add support for subscriptions with a $0 initial payment to AutomateWoo referral coupons. The referral coupon is removed after the subscription's first renewal payment.
  * Author: Prospress Inc.
  * Author URI: https://prospress.com/
  * License: GPLv3

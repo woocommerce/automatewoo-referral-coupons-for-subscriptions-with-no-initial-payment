@@ -1,6 +1,11 @@
 # AutomateWoo - Referral coupons for subscriptions with $0 initial payment
 
-Add support for subscriptions with a $0 initial payment to AutomateWoo referral coupons. The referral coupon is removed after the first subscription payment that is >$0.
+Add support for subscriptions with a $0 initial payment to AutomateWoo referral coupons. The referral coupon is removed after the subscription's first renewal payment.
+
+A note is added to the subscription when a referral coupon is removed.
+
+**Please note:** Activating this plugin will prevent referral coupons from working on non-subscription orders.
+
 
 ## Minimum Requirements
 * PHP 5.4+
