@@ -1,8 +1,8 @@
 <?php
 /*
- * Plugin Name: {plugin_name}
- * Plugin URI: https://github.com/Prospress/{plugin_slug}/
- * Description: {plugin_short_description}
+ * Plugin Name: AutomateWoo - Referral coupons for subscriptions with $0 initial payment
+ * Plugin URI: https://github.com/Prospress/automatewoo-referral-coupons-for-subscriptions-with-no-initial-payment/
+ * Description: Add support for subscriptions with a $0 initial payment to AutomateWoo referral coupons. The referral coupon is removed after the first subscription payment that is >$0.
  * Author: Prospress Inc.
  * Author URI: https://prospress.com/
  * License: GPLv3
@@ -10,7 +10,9 @@
  * Requires at least: 4.0
  * Tested up to: 4.8
  *
- * GitHub Plugin URI: Prospress/{plugin_slug}
+ * WC requires at least: 3.6
+ *
+ * GitHub Plugin URI: Prospress/automatewoo-referral-coupons-for-subscriptions-with-no-initial-payment
  * GitHub Branch: master
  *
  * Copyright 2018 Prospress, Inc.  (email : freedoms@prospress.com)
@@ -28,19 +30,19 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
- * @package		{plugin_name}
+ * @package		AutomateWoo - Referral coupons for subscriptions with $0 initial payment
  * @author		Prospress Inc.
  * @since		1.0
  */
 
 require_once( 'includes/class-pp-dependencies.php' );
 
-if ( false === PP_Dependencies::is_woocommerce_active( '3.0' ) ) {
-	PP_Dependencies::enqueue_admin_notice( '{plugin_name}', 'WooCommerce', '3.0' );
+if ( false === PP_Dependencies::is_woocommerce_active( '3.6' ) ) {
+	PP_Dependencies::enqueue_admin_notice( 'AutomateWoo - Referral coupons for subscriptions with $0 initial payment', 'WooCommerce', '3.0' );
 	return;
 }
 
-if ( false === PP_Dependencies::is_subscriptions_active( '2.1' ) ) {
-	PP_Dependencies::enqueue_admin_notice( '{plugin_name}', 'WooCommerce Subscriptions', '2.1' );
+if ( false === PP_Dependencies::is_subscriptions_active( '2.4' ) ) {
+	PP_Dependencies::enqueue_admin_notice( 'AutomateWoo - Referral coupons for subscriptions with $0 initial payment', 'WooCommerce Subscriptions', '2.1' );
 	return;
 }
