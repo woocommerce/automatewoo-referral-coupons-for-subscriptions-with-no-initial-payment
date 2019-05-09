@@ -5,6 +5,7 @@ Add support for subscriptions with a $0 initial payment to AutomateWoo referral 
 ## Minimum Requirements
 * PHP 5.4+
 * WooCommerce 3.6+
+* WooCommerce Subscriptions 2.4+
 * AutomateWoo 4.5+
 * AutomateWoo - Refer A Friend 2.3.2+
 
