@@ -10,7 +10,7 @@ A note is added to the subscription when a referral coupon is removed.
 ## Minimum Requirements
 * PHP 5.4+
 * WooCommerce 3.6+
-* WooCommerce Subscriptions 2.4+
+* WooCommerce Subscriptions 2.6+
 * AutomateWoo 4.5+
 * AutomateWoo - Refer A Friend 2.3.2+
 
@@ -24,7 +24,18 @@ To install:
 1. Click **Install Now**
 1. Click **Activate**
 
-### Updates
+## Options
+
+### Set how many renewal payments a referral coupon is valid for
+
+By default, each referral coupon is valid for a single renewal payment and is removed from the subscription after that payment is completed.
+You can customize the number of subscription renewal payments that a referral coupon is valid for with the following constant. 
+
+```php
+define( 'ARCFSWNIP_COUPON_VALID_RENEWAL_PAYMENTS_COUNT', 2 );
+```
+
+## Updates
 
 To keep the plugin up-to-date, use the [GitHub Updater](https://github.com/afragen/github-updater).
 
