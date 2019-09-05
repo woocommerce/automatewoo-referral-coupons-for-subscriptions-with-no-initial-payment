@@ -46,7 +46,7 @@ if ( false === PP_Dependencies::is_woocommerce_active( '3.6' ) ) {
 	return;
 }
 
-if ( false === PP_Dependencies::is_subscriptions_active( '2.4' ) ) {
+if ( false === PP_Dependencies::is_subscriptions_active( '2.6' ) ) {
 	PP_Dependencies::enqueue_admin_notice( 'AutomateWoo - Referral coupons for subscriptions with $0 initial payment', 'WooCommerce Subscriptions', '2.4' );
 	return;
 }
