@@ -13,9 +13,18 @@ defined( 'ABSPATH' ) || exit;
 final class Plugin {
 
 	/**
+	 * @var int
+	 */
+	public static $coupon_valid_renewal_payments_count = 1;
+
+	/**
 	 * Init this mini-plugin.
 	 */
 	public static function init() {
+		if ( defined( 'ARCFSWNIP_COUPON_VALID_RENEWAL_PAYMENTS_COUNT' ) ) {
+			self::$coupon_valid_renewal_payments_count = ARCFSWNIP_COUPON_VALID_RENEWAL_PAYMENTS_COUNT;
+		}
+
 		add_filter( 'automatewoo/referrals/coupon_data', [ __CLASS__, 'filter_referral_coupon_data' ] );
 		add_action( 'woocommerce_subscription_renewal_payment_complete', [ __CLASS__, 'remove_referral_coupon_after_subscription_payment' ] );
 	}
@@ -55,7 +64,12 @@ final class Plugin {
 	public static function remove_referral_coupon_after_subscription_payment( $subscription ) {
 		$referral_coupon = null;
 
-		foreach ( $subscription->get_used_coupons() as $coupon_code ) {
+		if ( $subscription->get_payment_count( 'completed', 'renewal' ) < self::$coupon_valid_renewal_payments_count ) {
+			// Do not remove coupon yet
+			return;
+		}
+
+		foreach ( $subscription->get_coupon_codes() as $coupon_code ) {
 			// If coupon code matches referral coupon pattern and isn't a stored coupon
 			if ( Referrals\Coupons::matches_referral_coupon_pattern( $coupon_code ) && 0 === wc_get_coupon_id_by_code( $coupon_code ) ) {
 				$referral_coupon = $coupon_code;
