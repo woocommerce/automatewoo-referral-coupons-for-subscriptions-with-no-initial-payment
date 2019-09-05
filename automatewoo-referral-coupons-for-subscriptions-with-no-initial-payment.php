@@ -6,7 +6,7 @@
  * Author: Prospress Inc.
  * Author URI: https://prospress.com/
  * License: GPLv3
- * Version: 1.0.0
+ * Version: 1.1.0
  * Requires at least: 5.1
  * Tested up to: 5.2
  *
